@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1024">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Una carta para Camila">
+  <title>Para Camila</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ff4d6d' d='M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.2 1.7-2 3.2-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-locked is-loading">
+
+  <!-- ============ Íconos SVG (se usan con <use href="#i-…">) ============ -->
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.2 1.7-2 3.2-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 1c.6 5.3 5.7 10.4 11 11-5.3.6-10.4 5.7-11 11-.6-5.3-5.7-10.4-11-11C6.3 11.4 11.4 6.3 12 1z"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+    </symbol>
+    <symbol id="i-strawberry" viewBox="0 0 24 24">
+      <path fill="#ff4d6d" d="M12 7c4.5 0 7.5 2.3 7.5 5.5 0 4.6-4.3 9.5-7.5 9.5s-7.5-4.9-7.5-9.5C4.5 9.3 7.5 7 12 7z"/>
+      <g fill="#ffe3a3">
+        <ellipse cx="9" cy="11.5" rx=".55" ry=".8"/><ellipse cx="12" cy="10.5" rx=".55" ry=".8"/>
+        <ellipse cx="15" cy="11.5" rx=".55" ry=".8"/><ellipse cx="10.5" cy="14.5" rx=".55" ry=".8"/>
+        <ellipse cx="13.5" cy="14.5" rx=".55" ry=".8"/><ellipse cx="12" cy="17.5" rx=".55" ry=".8"/>
+        <ellipse cx="8" cy="14.8" rx=".5" ry=".75"/><ellipse cx="16" cy="14.8" rx=".5" ry=".75"/>
+      </g>
+      <path fill="#3fae6a" d="M12 8.2C10.2 6 7.6 5.6 5.8 6.4c1.3.2 2.4.9 3 1.8-1.5 0-2.8.7-3.2 1.8 2.3-.6 4.6-.9 6.4-1.8zm0 0c1.8-2.2 4.4-2.6 6.2-1.8-1.3.2-2.4.9-3 1.8 1.5 0 2.8.7 3.2 1.8-2.3-.6-4.6-.9-6.4-1.8z"/>
+      <path fill="none" stroke="#3fae6a" stroke-width="1.4" stroke-linecap="round" d="M12 8V4.5"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/>
+      </g>
+      <path fill="currentColor" d="M12 17.5s-3-1.8-3.6-3.6c-.4-1.3.4-2.6 1.7-2.6.8 0 1.4.5 1.9 1.1.5-.6 1.1-1.1 1.9-1.1 1.3 0 2.1 1.3 1.7 2.6-.6 1.8-3.6 3.6-3.6 3.6z"/>
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 19C5 10.5 10 5 20 4c0 10-5.5 15.5-13.5 15.5"/><path d="M5 19l8-8"/>
+      </g>
+    </symbol>
+    <symbol id="i-strength" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M6.5 6.5v11M3.5 9v6M17.5 6.5v11M20.5 9v6M6.5 12h11"/>
+      </g>
+    </symbol>
+    <symbol id="i-feather" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 4C13 4 7.5 8.5 7 17l-3 3"/><path d="M7 17c6.5 0 11.5-4.5 13-13"/><path d="M10.5 13.5h5"/>
+      </g>
+    </symbol>
+    <symbol id="i-bow" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M11 12C8.5 8.5 3.5 6 2.3 8.2 1.2 10.3 1.8 15.6 3 16.4 4.6 17.4 8.7 14.3 11 12zm2 0c2.5-3.5 7.5-6 8.7-3.8 1.1 2.1.5 7.4-.7 8.2-1.6 1-5.7-2.1-8-4.4z"/>
+      <ellipse cx="12" cy="12" rx="2.2" ry="2.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9.5"/><path d="M7.5 13.5c1.2 2.2 2.8 3.2 4.5 3.2s3.3-1 4.5-3.2"/>
+        <path d="M8.5 9.5h.01M15.5 9.5h.01" stroke-width="2.6"/>
+      </g>
+    </symbol>
+    <symbol id="i-lips" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 12c3-4 6.2-5 8.3-3.4 1-.6 2.4-.6 3.4 0C15.8 7 19 8 22 12c-4.2 5.3-15.8 5.3-20 0z"/>
+        <path d="M2 12c6 1.3 14 1.3 20 0"/>
+      </g>
+    </symbol>
+    <symbol id="i-tulip" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 13c-3.5 0-5.5-2.5-5.5-7.5l3 2L12 3l2.5 4.5 3-2c0 5-2 7.5-5.5 7.5z"/>
+        <path d="M12 13v8M12 18.5c-1.8-2-3.8-2.3-5.5-1.7M12 17c1.8-2 3.8-2.3 5.5-1.7"/>
+      </g>
+    </symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2.5 2.2 9.5 2.2 12 0v-5"/><path d="M22 9v6"/>
+      </g>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <ellipse cx="6" cy="10" rx="2" ry="2.6"/><ellipse cx="10" cy="6" rx="2" ry="2.6"/>
+        <ellipse cx="14.5" cy="6" rx="2" ry="2.6"/><ellipse cx="18.5" cy="10" rx="2" ry="2.6"/>
+        <path d="M12.2 11c3 0 6 4.2 6 6.6 0 2.2-2.3 2.6-3.4 2.1-1.1-.5-1.8-.8-2.6-.8s-1.5.3-2.6.8c-1.1.5-3.4.1-3.4-2.1 0-2.4 3-6.6 6-6.6z"/>
+      </g>
+    </symbol>
+    <symbol id="i-envelope" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/>
+      </g>
+    </symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <!-- Stickers -->
+    <symbol id="s-strawberry" viewBox="0 0 64 64">
+      <path fill="#ff4d6d" d="M32 18c12 0 20 6 20 15 0 12-11 25-20 25S12 45 12 33c0-9 8-15 20-15z"/>
+      <path fill="#e8344e" d="M44 22c5 3 8 7 8 11 0 12-11 25-20 25 10-6 16-20 12-36z" opacity=".55"/>
+      <g fill="#ffe3a3">
+        <ellipse cx="22" cy="31" rx="1.4" ry="2"/><ellipse cx="32" cy="28" rx="1.4" ry="2"/><ellipse cx="42" cy="31" rx="1.4" ry="2"/>
+        <ellipse cx="27" cy="39" rx="1.4" ry="2"/><ellipse cx="37" cy="39" rx="1.4" ry="2"/><ellipse cx="32" cy="48" rx="1.4" ry="2"/>
+        <ellipse cx="19" cy="40" rx="1.3" ry="1.9"/><ellipse cx="45" cy="40" rx="1.3" ry="1.9"/>
+      </g>
+      <ellipse cx="21" cy="26" rx="4" ry="2.4" fill="#fff" opacity=".7" transform="rotate(-35 21 26)"/>
+      <path fill="#3fae6a" d="M32 21c-5-6-12-7-17-5 3.5.6 6.5 2.5 8 5-4 0-7.5 2-8.5 5 6-1.6 12.5-2.5 17.5-5zm0 0c5-6 12-7 17-5-3.5.6-6.5 2.5-8 5 4 0 7.5 2 8.5 5-6-1.6-12.5-2.5-17.5-5z"/>
+      <path fill="none" stroke="#3fae6a" stroke-width="3.2" stroke-linecap="round" d="M32 20V10"/>
+    </symbol>
+    <symbol id="s-cherry" viewBox="0 0 64 64">
+      <g fill="none" stroke="#3a8a55" stroke-width="3" stroke-linecap="round">
+        <path d="M34 8c-3 12-9 22-15 30"/><path d="M34 8c2 12 7 20 12 26"/>
+      </g>
+      <path fill="#4cc27a" d="M34 9c6-6 16-6 21 1-8 3-15 3-21-1z"/>
+      <path fill="none" stroke="#3a8a55" stroke-width="1.4" d="M36 9c5-1 11-1 17 1"/>
+      <circle cx="19" cy="46" r="12" fill="#e8344e"/>
+      <circle cx="46" cy="43" r="12" fill="#ff4d6d"/>
+      <path fill="#b81c38" d="M28 52a12 12 0 0 1-19-9 12 12 0 0 0 19 9z" opacity=".5"/>
+      <ellipse cx="14" cy="41" rx="3.5" ry="2.2" fill="#fff" opacity=".75" transform="rotate(-35 14 41)"/>
+      <ellipse cx="41" cy="38" rx="3.5" ry="2.2" fill="#fff" opacity=".75" transform="rotate(-35 41 38)"/>
+    </symbol>
+    <symbol id="s-bow" viewBox="0 0 64 64">
+      <path fill="#e8344e" stroke="#b81c38" stroke-width="2" stroke-linejoin="round" d="M29 32C22 20 8 14 5 21c-3 6-1 20 3 22 5 3 16-4 21-11zm6 0c7-12 21-18 24-11 3 6 1 20-3 22-5 3-16-4-21-11z"/>
+      <ellipse cx="32" cy="32" rx="6" ry="7" fill="#ff4d6d" stroke="#b81c38" stroke-width="2"/>
+      <ellipse cx="13" cy="25" rx="3" ry="1.8" fill="#fff" opacity=".6" transform="rotate(-25 13 25)"/>
+    </symbol>
+    <symbol id="s-skull" viewBox="0 0 64 64">
+      <path fill="#fff" stroke="#2a1838" stroke-width="2.6" stroke-linejoin="round" d="M32 14c-12 0-20 8-20 18 0 6 3 10 7 12.5V50c0 2.2 1.8 4 4 4h18c2.2 0 4-1.8 4-4v-5.5c4-2.5 7-6.5 7-12.5 0-10-8-18-20-18z"/>
+      <ellipse cx="24" cy="33" rx="5" ry="5.8" fill="#2a1838"/>
+      <ellipse cx="40" cy="33" rx="5" ry="5.8" fill="#2a1838"/>
+      <circle cx="25.6" cy="31" r="1.6" fill="#fff"/><circle cx="41.6" cy="31" r="1.6" fill="#fff"/>
+      <path fill="#2a1838" d="M32 39l-2.4 3.8h4.8z"/>
+      <path stroke="#2a1838" stroke-width="2" stroke-linecap="round" d="M27 48v4M32 48v4M37 48v4"/>
+      <ellipse cx="17.5" cy="41" rx="3" ry="1.8" fill="#ff8fc7"/><ellipse cx="46.5" cy="41" rx="3" ry="1.8" fill="#ff8fc7"/>
+      <path fill="#ff8fc7" stroke="#2a1838" stroke-width="1.8" stroke-linejoin="round" d="M42 14c-2-7-10-10-12-5s6 7 12 5zm0 0c6-4 14-3 14 2s-9 5-14-2z"/>
+      <circle cx="42" cy="14" r="3.2" fill="#ff4d8f" stroke="#2a1838" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="s-bat" viewBox="0 0 64 64">
+      <path fill="#4a2c63" stroke="#1b1024" stroke-width="1.8" stroke-linejoin="round" d="M28 30c-4-8-13-13-24-10 4 3 5 7 4 11 4-2 8-1 10 2 2-3 6-4 10-3zm8 0c4-8 13-13 24-10-4 3-5 7-4 11-4-2-8-1-10 2-2-3-6-4-10-3z"/>
+      <ellipse cx="32" cy="33" rx="8.5" ry="9.5" fill="#4a2c63" stroke="#1b1024" stroke-width="1.8"/>
+      <path fill="#4a2c63" stroke="#1b1024" stroke-width="1.8" stroke-linejoin="round" d="M26 27l.5-7.5 4.5 5zm12 0l-.5-7.5-4.5 5z"/>
+      <circle cx="28.8" cy="32" r="2.2" fill="#fff"/><circle cx="35.2" cy="32" r="2.2" fill="#fff"/>
+      <circle cx="29.3" cy="32.3" r="1" fill="#1b1024"/><circle cx="35.7" cy="32.3" r="1" fill="#1b1024"/>
+      <ellipse cx="26" cy="36.5" rx="1.8" ry="1.1" fill="#ff8fc7"/><ellipse cx="38" cy="36.5" rx="1.8" ry="1.1" fill="#ff8fc7"/>
+      <path fill="#fff" d="M31 37.5l1 2.2 1-2.2z"/>
+    </symbol>
+    <symbol id="s-devil-heart" viewBox="0 0 64 64">
+      <path fill="#ff4d8f" stroke="#2a1838" stroke-width="1.8" stroke-linejoin="round" d="M21 22c-5-3-7-9-5-14 2 4 6 7 10 9zm22 0c5-3 7-9 5-14-2 4-6 7-10 9z"/>
+      <path fill="#9b6bd3" stroke="#2a1838" stroke-width="2.2" stroke-linejoin="round" d="M32 54S16 44.5 11.5 35c-3-7 1.5-15 9-15 4.5 0 7.8 2.5 11.5 6.8 3.7-4.3 7-6.8 11.5-6.8 7.5 0 12 8 9 15C48 44.5 32 54 32 54z"/>
+      <path fill="none" stroke="#9b6bd3" stroke-width="3" stroke-linecap="round" d="M44 47c6 3 11 1 13-5"/>
+      <path fill="#9b6bd3" stroke="#2a1838" stroke-width="1.4" stroke-linejoin="round" d="M57 42l-3.5-4 6-.5z"/>
+      <ellipse cx="20" cy="28" rx="3.5" ry="2" fill="#fff" opacity=".55" transform="rotate(-30 20 28)"/>
+    </symbol>
+    <symbol id="s-moon-star" viewBox="0 0 64 64">
+      <path fill="#d9b8ff" stroke="#2a1838" stroke-width="2.2" stroke-linejoin="round" d="M44 46A20 20 0 0 1 22 12a21 21 0 1 0 29 29 20 20 0 0 1-7 5z"/>
+      <circle cx="22" cy="40" r="2.4" fill="#b58be8"/><circle cx="30" cy="48" r="1.8" fill="#b58be8"/>
+      <path fill="#ffe0b0" stroke="#2a1838" stroke-width="1.6" stroke-linejoin="round" d="M47 10c.8 4.5 3.7 7.4 8.2 8.2-4.5.8-7.4 3.7-8.2 8.2-.8-4.5-3.7-7.4-8.2-8.2 4.5-.8 7.4-3.7 8.2-8.2z"/>
+    </symbol>
+
+    <symbol id="i-hand" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5c0 3.6-2.6 6.5-6 6.5-2.4 0-3.8-1.1-5-3l-2.6-4.3a1.4 1.4 0 0 1 2.3-1.6L9 14"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- ============ 0. PANTALLA DE CARGA ============ -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__stage" aria-hidden="true">
+      <span class="loader__orbit loader__orbit--1"><svg><use href="#i-sparkle"/></svg></span>
+      <span class="loader__orbit loader__orbit--2"><svg><use href="#i-heart"/></svg></span>
+      <span class="loader__orbit loader__orbit--3"><svg><use href="#i-sparkle"/></svg></span>
+      <svg class="loader__heart" viewBox="-1 -1 26 26">
+        <defs>
+          <linearGradient id="loaderGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#9b6bd3"/>
+            <stop offset=".6" stop-color="#ff8fc7"/>
+            <stop offset="1" stop-color="#ff4d6d"/>
+          </linearGradient>
+        </defs>
+        <path class="loader__heart-fill" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.2 1.7-2 3.2-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/>
+        <path class="loader__heart-line" pathLength="100" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 5.3 3.2 1.7-2 3.2-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/>
+      </svg>
+    </div>
+    <p class="loader__text" id="loaderText">Preparando algo especial para ti</p>
+    <div class="loader__bar" aria-hidden="true"><span class="loader__bar-fill" id="loaderBar"></span></div>
+    <p class="loader__percent" id="loaderPercent" aria-hidden="true">0%</p>
+  </div>
+
+  <!-- Fondo con partículas flotando -->
+  <div class="floaters" aria-hidden="true"></div>
+  <!-- Capa para efectos (explosiones, corazones al tocar) -->
+  <div class="fx" id="fx" aria-hidden="true"></div>
+  <!-- Aviso corto (por ejemplo, al tocar un capítulo bloqueado) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ 1. CANDADO ============ -->
+  <section class="lock" id="lock" aria-label="Pantalla de entrada">
+    <div class="lock__card">
+      <div class="lock__icon" aria-hidden="true">
+        <span class="lock__shackle"></span>
+        <span class="lock__body"><svg class="ico"><use href="#i-heart"/></svg></span>
+      </div>
+      <p class="lock__eyebrow">Una carta para ti</p>
+      <h1 class="lock__title">Camila</h1>
+      <p class="lock__question">¿Recuerdas el día en que empezó nuestra historia?</p>
+
+      <form class="lock__form" id="lockForm" novalidate>
+        <div class="lock__selects">
+          <label class="select">
+            <span class="select__label">Día</span>
+            <select id="day" aria-label="Día"></select>
+          </label>
+          <label class="select">
+            <span class="select__label">Mes</span>
+            <select id="month" aria-label="Mes"></select>
+          </label>
+          <label class="select">
+            <span class="select__label">Año</span>
+            <select id="year" aria-label="Año"></select>
+          </label>
+        </div>
+        <button type="submit" class="btn btn--primary">
+          Abrir mi carta <svg class="ico"><use href="#i-envelope"/></svg>
+        </button>
+        <p class="lock__hint" id="lockHint" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ 2. SOBRE ============ -->
+  <section class="envelope-stage" id="envelopeStage" aria-label="Sobre" hidden>
+    <p class="envelope-stage__text">Toca el sobre, mi amor</p>
+    <button class="envelope" id="envelope" aria-label="Abrir el sobre">
+      <span class="envelope__back"></span>
+      <span class="envelope__paper">
+        <span class="envelope__paper-line">Para Camila,</span>
+        <span class="envelope__paper-line envelope__paper-line--small">con todo mi amor</span>
+      </span>
+      <span class="envelope__front"></span>
+      <span class="envelope__flap"></span>
+      <span class="envelope__seal"><svg class="ico"><use href="#i-heart"/></svg></span>
+    </button>
+  </section>
+
+  <!-- ============ 3. CARTA ============ -->
+  <!-- Barra de progreso de lectura -->
+  <div class="progress" id="progress" hidden aria-hidden="true">
+    <span class="progress__bar"></span>
+    <svg class="progress__berry"><use href="#i-strawberry"/></svg>
+  </div>
+
+  <!-- Navegación por capítulos -->
+  <nav class="chapters" id="chapters" hidden aria-label="Capítulos">
+    <a href="#intro" class="chapters__dot" aria-label="Inicio"><svg class="ico"><use href="#i-heart"/></svg></a>
+    <a href="#orgullo" class="chapters__dot" aria-label="Capítulo uno">I</a>
+    <a href="#amo" class="chapters__dot" aria-label="Capítulo dos">II</a>
+    <a href="#sueno" class="chapters__dot" aria-label="Capítulo tres">III</a>
+    <a href="#pronto" class="chapters__dot" aria-label="Capítulo cuatro">IV</a>
+    <a href="#futuro" class="chapters__dot" aria-label="Capítulo cinco">V</a>
+  </nav>
+
+  <main class="letter" id="letter" hidden>
+
+    <!-- Intro -->
+    <header class="section intro" id="intro" data-chapter>
+      <div class="intro__paper">
+        <p class="intro__date" id="todayDate"></p>
+        <h2 class="intro__greeting">Mi Camila,</h2>
+        <!-- El texto se escribe solo desde main.js (data-type) -->
+        <p class="typewriter" data-type="Hay personas que cambian, y hay personas que florecen. Tú floreciste."></p>
+        <p class="typewriter" data-type="Te escribí esto para que lo leas despacio, todas las veces que quieras, y sepas que cada palabra es completamente cierta."></p>
+        <p class="typewriter typewriter--strong" data-type="Estoy orgulloso de ti, te admiro y te amo."></p>
+        <p class="intro__scroll">Desliza hacia abajo <svg class="ico"><use href="#i-chevron-down"/></svg></p>
+      </div>
+      <img class="intro__duo" src="assets/img/duo.png" alt="" data-optional>
+    </header>
+
+    <!-- Candado entre capítulos: main.js lo mueve debajo del último capítulo abierto -->
+    <section class="gate" id="gate" aria-live="polite">
+      <div class="gate__card">
+        <div class="gate__lock" aria-hidden="true">
+          <span class="gate__shackle"></span>
+          <span class="gate__body"><svg class="ico"><use href="#i-heart"/></svg></span>
+        </div>
+        <p class="gate__kicker" id="gateKicker">Capítulo uno</p>
+        <h3 class="gate__title" id="gateTitle">Todavía está cerrado</h3>
+        <p class="gate__task" id="gateTask"></p>
+        <div class="gate__progress" aria-hidden="true"><span class="gate__progress-fill" id="gateFill"></span></div>
+        <p class="gate__count" id="gateCount"></p>
+        <button class="gate__hint" id="gateHint">
+          <svg class="ico"><use href="#i-hand"/></svg> ¿Dónde? Llévame
+        </button>
+        <button class="btn btn--primary gate__open" id="gateOpen" hidden>Abrir</button>
+        <p class="gate__help" id="gateHelp">
+          Así funciona: cada capítulo se abre cuando completas el anterior.
+          Aquí abajo siempre verás qué te falta.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Capítulo 1 · estilo Kuromi: Orgullo ===== -->
+    <section class="section kuromi" id="orgullo" data-chapter aria-labelledby="kuromiTitle">
+      <div class="kuromi__deco" aria-hidden="true">
+        <svg><use href="#i-sparkle"/></svg><svg><use href="#i-heart"/></svg><svg><use href="#i-sparkle"/></svg>
+        <svg><use href="#i-moon"/></svg><svg><use href="#i-sparkle"/></svg><svg><use href="#i-heart"/></svg>
+      </div>
+
+      <!-- Stickers estilo Kuromi (se pueden tocar) -->
+      <div class="stickers stickers--kuromi reveal" aria-hidden="true">
+        <span class="sticker"><svg><use href="#s-skull"/></svg></span>
+        <span class="sticker sticker--flap"><svg><use href="#s-bat"/></svg></span>
+        <span class="sticker"><svg><use href="#s-devil-heart"/></svg></span>
+        <span class="sticker"><svg><use href="#s-moon-star"/></svg></span>
+        <span class="sticker sticker--flap"><svg><use href="#s-bat"/></svg></span>
+        <span class="sticker"><svg><use href="#s-skull"/></svg></span>
+        <span class="sticker"><svg><use href="#s-devil-heart"/></svg></span>
+      </div>
+
+      <div class="section__head reveal">
+        <img class="section__mascot" src="assets/img/kuromi.png" alt="" loading="lazy" data-optional data-parallax="0.12">
+        <p class="section__eyebrow">Capítulo uno</p>
+        <h2 class="section__title" id="kuromiTitle">Lo orgulloso que estoy de ti</h2>
+        <p class="section__lead">Te he visto crecer de una forma que me dejó sin palabras. Toca cada tarjeta.</p>
+      </div>
+
+      <!-- Mosaico: cada tarjeta se abre en grande sobre la pantalla -->
+      <div class="pride-grid">
+        <button class="pride-tile reveal" data-icon="i-home">
+          <span class="pride-tile__icon"><svg class="ico"><use href="#i-home"/></svg></span>
+          <span class="pride-tile__title">Tu familia</span>
+          <span class="pride-tile__seen" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+          <span class="pride-tile__text" hidden>
+            Ver cómo has sanado y fortalecido la relación con tu familia me llena el corazón.
+            Eso requiere paciencia, humildad y muchísimo amor. Lo lograste tú.
+          </span>
+        </button>
+
+        <button class="pride-tile reveal" data-icon="i-leaf">
+          <span class="pride-tile__icon"><svg class="ico"><use href="#i-leaf"/></svg></span>
+          <span class="pride-tile__title">Cómo te cuidas</span>
+          <span class="pride-tile__seen" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+          <span class="pride-tile__text" hidden>
+            Volviste a comer bien, a tratarte con cariño, a darle a tu cuerpo lo que merece.
+            Cuidarte es una forma de quererte, y verte quererte es precioso.
+          </span>
+        </button>
+
+        <button class="pride-tile reveal" data-icon="i-strength">
+          <span class="pride-tile__icon"><svg class="ico"><use href="#i-strength"/></svg></span>
+          <span class="pride-tile__title">Tu disciplina</span>
+          <span class="pride-tile__seen" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+          <span class="pride-tile__text" hidden>
+            Entrenas, eres constante, no te rindes. Esa fuerza no es solo física:
+            es la mujer decidida en la que te convertiste, un día a la vez.
+          </span>
+        </button>
+
+        <button class="pride-tile reveal" data-icon="i-feather">
+          <span class="pride-tile__icon"><svg class="ico"><use href="#i-feather"/></svg></span>
+          <span class="pride-tile__title">Tu paz</span>
+          <span class="pride-tile__seen" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+          <span class="pride-tile__text" hidden>
+            Elegiste ser una persona de paz. Eso dice muchísimo de tu madurez,
+            de tu corazón y de la mujer tan bonita que eres por dentro.
+          </span>
+        </button>
+      </div>
+
+      <!-- Medidor de orgullo que se llena al abrir tarjetas -->
+      <div class="meter reveal" aria-live="polite">
+        <p class="meter__label">Nivel de orgullo: <strong id="meterText">abre las tarjetas</strong></p>
+        <div class="meter__track"><span class="meter__fill" id="meterFill"></span></div>
+      </div>
+
+      <blockquote class="kuromi__quote reveal">“Te admiro, Camila. De verdad te admiro.”</blockquote>
+    </section>
+
+    <!-- ===== Capítulo 2 · estilo Hello Kitty: Lo que amo de ti ===== -->
+    <section class="section kitty" id="amo" data-chapter aria-labelledby="kittyTitle">
+      <div class="kitty__dots" aria-hidden="true"></div>
+
+      <!-- Stickers de fresitas y cerezas (se pueden tocar) -->
+      <div class="stickers stickers--kitty reveal" aria-hidden="true">
+        <span class="sticker"><svg><use href="#s-strawberry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-cherry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-bow"/></svg></span>
+        <span class="sticker"><svg><use href="#s-cherry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-strawberry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-cherry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-strawberry"/></svg></span>
+        <span class="sticker"><svg><use href="#s-bow"/></svg></span>
+      </div>
+
+      <div class="section__head reveal">
+        <img class="section__mascot" src="assets/img/hello-kitty.png" alt="" loading="lazy" data-optional data-parallax="0.12">
+        <p class="section__eyebrow">Capítulo dos</p>
+        <h2 class="section__title" id="kittyTitle">Lo que amo de ti</h2>
+        <p class="section__lead">Desliza las tarjetas hacia un lado y tócalas para darles la vuelta.</p>
+      </div>
+
+      <!-- Mazo de tarjetas deslizables -->
+      <div class="deck reveal" id="deck">
+        <div class="deck__end">
+          <p class="deck__end-text">Y podría seguir toda la vida…</p>
+          <button class="btn btn--kitty" id="deckReset">Ver otra vez</button>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="1">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/estrella-ambar.jpg" alt="Una estrella color ámbar en el espacio" data-optional>
+              <h3>Tus ojos</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Tienen el color de una estrella ámbar: cálidos, profundos, imposibles de dejar de mirar. Podría perderme en ellos toda la vida.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="2">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/cometa.jpg" alt="Un cometa con una cola suave y luminosa" data-optional>
+              <h3>Tu cabello</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Suave como la cola de un cometa que cruza el cielo despacio. Ya me imagino acariciándolo mientras hablamos de todo y de nada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="3">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/amanecer-espacio.jpg" alt="Un amanecer visto desde el espacio" data-optional>
+              <h3>Tu sonrisa</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Es como un amanecer visto desde el espacio: lo ilumina todo de golpe. Me arregla el día, aunque sea a través de una pantalla.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="4">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/nebulosa-rosa.jpg" alt="Una nebulosa de tonos rosados" data-optional>
+              <h3>Tus labios</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Rosados y suaves como una nebulosa donde nacen estrellas. Y te aviso desde ya: tengo muchísimos besos guardados para ti.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="5">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/luna-creciente.jpg" alt="Una luna creciente delicada" data-optional>
+              <h3>Tu figura</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Delgada y delicada como una luna creciente: una línea de luz perfecta en medio del cielo. Eres hermosa de pies a cabeza.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swipe-card swipe-card--photo" data-color="6">
+          <div class="swipe-card__inner">
+            <div class="swipe-card__face swipe-card__front">
+              <img class="swipe-card__photo" src="assets/img/nebulosa-corazon.jpg" alt="La Nebulosa del Corazón" data-optional>
+              <h3>Tu corazón</h3>
+              <span class="swipe-card__tap"><svg class="ico"><use href="#i-hand"/></svg> toca</span>
+            </div>
+            <div class="swipe-card__face swipe-card__back">
+              <p>Hay una nebulosa con forma de corazón a miles de años luz, y aun así el corazón más bonito del universo es el tuyo. Eso es lo que más amo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck__controls reveal">
+        <span class="deck__count" id="deckCount">1 / 6</span>
+        <button class="deck__next" id="deckNext" aria-label="Siguiente tarjeta">
+          Siguiente <svg class="ico"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Capítulo 3: Tu sueño ===== -->
+    <section class="section dream" id="sueno" data-chapter aria-labelledby="dreamTitle">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Capítulo tres</p>
+        <h2 class="section__title" id="dreamTitle">Tu sueño, psicóloga</h2>
+        <p class="section__lead">Sé que últimamente has dudado un poquito. Por eso te dejé esto aquí.</p>
+      </div>
+
+      <div class="dream__card reveal">
+        <div class="dream__badge" aria-hidden="true"><svg class="ico"><use href="#i-cap"/></svg></div>
+        <p>
+          Una persona que aprendió a sanar, a entenderse y a elegir la paz tiene algo
+          muy valioso para darle a los demás. Tú ya sabes lo que es crecer desde adentro.
+          Eso no se enseña en ninguna universidad: <strong>eso ya lo tienes.</strong>
+        </p>
+
+        <div class="diploma" aria-hidden="true">
+          <p class="diploma__name">Psic. Camila</p>
+          <p class="diploma__sub">muy pronto</p>
+        </div>
+
+        <button class="note-toggle" id="noteToggle" aria-expanded="false" aria-controls="dreamNote">
+          <span class="note-toggle__label">Ábrelo cuando dudes de ti</span>
+          <svg class="note-toggle__icon ico" aria-hidden="true"><use href="#i-envelope"/></svg>
+        </button>
+
+        <div class="dream__note" id="dreamNote">
+          <div class="dream__note-inner">
+            <p>
+              Dudar es normal, amor. Dudar no significa que no puedas, significa que te importa.
+              Vas a ser una psicóloga increíble, de esas que escuchan de verdad y que ayudan
+              a otros a encontrar la paz que tú encontraste.
+            </p>
+            <p>Y aquí voy a estar, creyendo en ti incluso los días que a ti te cueste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Capítulo 4: Lo que viene ===== -->
+    <section class="section soon" id="pronto" data-chapter aria-labelledby="soonTitle">
+      <div class="soon__stars" aria-hidden="true"></div>
+
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Capítulo cuatro</p>
+        <h2 class="section__title" id="soonTitle">Lo que viene</h2>
+      </div>
+
+      <article class="soon__letter">
+        <p class="reveal">
+          Hay una idea que me acompaña casi todos los días: la de, algún día no muy lejano,
+          compartir el mismo cielo al mismo tiempo. Sin horarios cruzados, sin una pantalla
+          en medio, sin tener que esperar a que llegue un mensaje.
+        </p>
+        <p class="reveal">
+          Hemos aprendido a querernos a la distancia, y eso tiene algo muy bonito: nos obligó
+          a conocernos de verdad. A escucharnos. A tener paciencia. A elegirnos incluso cuando
+          lo fácil habría sido no hacerlo.
+        </p>
+        <p class="reveal">
+          No quiero adelantar nada, ni ponerle más peso del que tiene. Solo quiero que sepas
+          que lo espero con calma, con ilusión y con el corazón tranquilo. Medellín te va a
+          recibir con su eterna primavera, y yo voy a estar ahí, sin prisa, con todo lo que
+          siento por ti.
+        </p>
+        <p class="soon__highlight reveal">
+          Todo lo bonito que tenemos lo construimos paso a paso. Lo que viene, también.
+        </p>
+      </article>
+
+      <!-- Rasca y descubre -->
+      <div class="scratch reveal">
+        <p class="scratch__title">Desliza el dedo para descubrir algo</p>
+        <div class="scratch__box" id="scratchBox">
+          <div class="scratch__prize">
+            <span class="scratch__prize-kicker">Una promesa</span>
+            <strong>Cada día que pasa es un día menos.</strong>
+            <span>Y cada uno de ellos vale la pena por ti.</span>
+          </div>
+          <canvas class="scratch__canvas" id="scratchCanvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Mylo y Tammy -->
+      <div class="frenchies reveal">
+        <p class="frenchies__kicker">Tus bebés</p>
+        <p class="frenchies__title">Mylo y Tammy también te esperan</p>
+        <p class="frenchies__lead">Dicen que eres su mamá, y ellos ya lo tienen claro. Tócalos.</p>
+        <div class="frenchies__row">
+          <button class="frenchie" aria-label="Ver mensaje de Mylo">
+            <span class="frenchie__bubble">Mami, te estamos esperando.</span>
+            <span class="frenchie__avatar">
+              <img src="assets/img/mylo.jpg" alt="Mylo" data-optional data-fallback="#myloFallback">
+              <svg class="frenchie__paw" id="myloFallback" hidden><use href="#i-paw"/></svg>
+            </span>
+            <span class="frenchie__name">Mylo</span>
+          </button>
+          <button class="frenchie" aria-label="Ver mensaje de Tammy">
+            <span class="frenchie__bubble">Ya te guardamos tu lugar en el sofá.</span>
+            <span class="frenchie__avatar">
+              <img src="assets/img/tammy.jpg" alt="Tammy" data-optional data-fallback="#tammyFallback">
+              <svg class="frenchie__paw" id="tammyFallback" hidden><use href="#i-paw"/></svg>
+            </span>
+            <span class="frenchie__name">Tammy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Capítulo 5: Nuestro futuro ===== -->
+    <section class="section future" id="futuro" data-chapter aria-labelledby="futureTitle">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Capítulo cinco</p>
+        <h2 class="section__title" id="futureTitle">Nuestro futuro</h2>
+      </div>
+
+      <div class="future__paper reveal">
+        <p>
+          Sueño con una familia hermosa contigo. Un niño y una niña que tengan tus ojos
+          color ámbar y tu sonrisa. Una casa con risas, con paz, con Mylo y Tammy
+          correteando y con mucho, muchísimo amor.
+        </p>
+        <p>
+          Ojalá podamos cumplir todo lo que soñamos, Camila. Yo voy a poner todo de mí
+          para que así sea, y para que seamos felices juntos.
+        </p>
+        <p class="future__sign">
+          Estoy orgulloso de ti, te admiro y te amo.<br>
+          <span>Siempre tuyo</span>
+        </p>
+      </div>
+
+      <!-- Pregunta final -->
+      <div class="question reveal" id="question">
+        <p class="question__text">¿Construimos ese futuro juntos?</p>
+        <div class="question__buttons" id="questionButtons">
+          <button class="question__yes" id="yesBtn">Sí</button>
+          <button class="question__no" id="noBtn">No</button>
+        </div>
+        <p class="question__answer" id="questionAnswer" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer" id="footer">
+      <div class="footer__garland" aria-hidden="true">
+        <svg class="g-berry"><use href="#i-strawberry"/></svg>
+        <svg class="g-bow"><use href="#i-bow"/></svg>
+        <svg class="g-heart"><use href="#i-heart"/></svg>
+        <svg class="g-moon"><use href="#i-moon"/></svg>
+        <svg class="g-heart"><use href="#i-heart"/></svg>
+        <svg class="g-bow"><use href="#i-bow"/></svg>
+        <svg class="g-berry"><use href="#i-strawberry"/></svg>
+      </div>
+      <p class="footer__since">Desde el 6 de febrero de 2024, y lo que falta</p>
+      <p class="footer__counter" id="daysCounter"></p>
+      <p class="footer__made">Hecha con <svg class="footer__beat ico"><use href="#i-heart"/></svg> por <strong>Branner</strong></p>
+      <button class="footer__top" id="toTop">Volver al inicio</button>
+    </footer>
+  </main>
+
+  <!-- Tarjeta de orgullo en pantalla -->
+  <div class="pride-modal" id="prideModal" role="dialog" aria-modal="true" aria-labelledby="prideModalTitle" hidden>
+    <div class="pride-modal__backdrop" data-close></div>
+    <article class="pride-modal__card" id="prideModalCard">
+      <button class="pride-modal__close" data-close aria-label="Cerrar">
+        <svg class="ico" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="pride-modal__glow" aria-hidden="true"></div>
+      <span class="pride-modal__icon"><svg class="ico"><use id="prideModalIcon" href="#i-home"/></svg></span>
+      <p class="pride-modal__kicker">Estoy orgulloso de ti</p>
+      <h3 class="pride-modal__title" id="prideModalTitle"></h3>
+      <p class="pride-modal__text" id="prideModalText"></p>
+      <div class="pride-modal__nav">
+        <span class="pride-modal__dots" id="prideModalDots" aria-hidden="true"></span>
+        <button class="pride-modal__next" id="prideModalNext">
+          Siguiente <svg class="ico"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+    </article>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
